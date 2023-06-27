@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="contenedor__todo">
+
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿quieres eliminar a un usario?</h3>
+                    
+                    <button id="btn__iniciar-sesion">Eliminar cuenta</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿quieres agregar a un usuario?</h3>
+                    <p>Registrate para conocer más de nosotros</p>
+                    <button id="btn__registrarse">Registrate</button>
+                </div>
+            </div>
+<!--formulario de login y registro-->
+            <div class="contenedor__login-register">
+                <!--Login-->
+                <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
+                    <h2>Eliminar cuenta</h2>
+                    <input type="text" placeholder="Correo Electronico" name="correo">
+                    <button>Eliminar cuenta</button>
+                </form>
+                <!--Registro-->
+                <form action="php/registro_usuario_be.php" method="POST" class="formulario__register">
+                    <h2>Activar usuario</h2>
+                    <input type="text" placeholder="Nombre Completo" name="nombre_completo">
+                    <input type="text" placeholder="Correo Electronico" name="correo">
+                    <input type="text" placeholder="Usuario" name="usuario">
+                    <input type="password" placeholder="Contraseña" name="contrasena">
+                    <input type="text" placeholder="Rol" name="nombre_completo">
+                    <button>Registrar usuario</button>
+                   
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
