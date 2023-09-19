@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo11-.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/registroo.css">
+    <title>REGISTRO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+        <span class="borderLine">
+            <form action="neg_registro.php" method="post">
+                <h2>Registro</h2>
+                <div class="inputBox">
+                    <select required="required" name="id_rol">
+                      <option value="2">Usuario</option>
+                    </select>
+                    <i></i>
+                  </div>
+                  <div class="inputBox">
+                    <input type="text" required="required" name="nombre">
+                    <span>Nombre</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="email" required="required" name="correo">
+                    <span>Correo</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required" name="contrasena">
+                    <span>Contraseña</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="text" required="required" name="telefono">
+                    <span>Numero de telefono</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="date" required="required" name="fecha_nacimiento">
+                    <span>Fecha de nacimineto</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="iniciarsesion.html">Ya tienes cuenta</a> <br>
+                </div> </BR>
+                <input type="submit" value="Registrarse">
+            </form>
+        </span>
+    </div>
+</body>
+</html>

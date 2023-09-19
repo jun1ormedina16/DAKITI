@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #050014;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.submenu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #19001d;
+    min-width: 150px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-decoration: none;
+}
+
+.sub-menu li {
+    margin: 5px 0;
+}
+
+.sub-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sub-menu a:hover {
+    background-color: #19001d;
+}
+
+::selection {
+    background-color: rgb(238, 255, 0);
+    color: rgb(81, 0, 255);
+}
