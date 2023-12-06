@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo11-.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estiloscarrito.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <title>Mi carrito de compras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <script src="js/cart.js" defer></script>
+        <script src="js/cartService.js" defer></script>
+</head>
+<header>
+    <nav>
+        <a href="./indexuser.php"><img src="img/logo11-.png" id="logo"></a>
+    <div>
+        <a href="./cart.html" id="cart"><img src="img/carr.png" alt="Carrito de compras"><span id="cuenta-carrito">0</span></a>
+    </div> 
+    </nav>
+</header>
+<main>
+    <p id="carrito-vacio">Ups, no hay productos, en el carrito. <a href="./indexcarrito.html">👉Agrega algunos👈</a></p>
+    <section id="productos-container"></section>
+    <section id="totales">
+        <script>
+            alert("Escanea el QR segun el metodo de pago selecionado");
+        </script>
+        <p>Total unidades: <span id="unidades">0</span></p>
+        <p>Total precio: $ <span id="precio">0</span></p>
+        <a target="_blank" href="https://epy.la/1yB5">PSE PAGOS</a><br>
+        <button disabled>Comprar</button>
+        <button id="reiniciar">Reiniciar Carrito</button>
+    </section>
+</main>
+<body>
+</body>
+</html>
