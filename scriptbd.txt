@@ -1,0 +1,94 @@
+// SENTENCIAS DDL //
+
+create database bar_dakiti;
+
+create table roles(
+Id int(2) not null,
+nombre varchar(8) not null
+primary key(Id)
+);
+
+create table usuario(
+Id_usuario int(11) not null,
+id_rol int(2) not null,
+Nombre varchar(80) not null,
+correo varchar(50) not null,
+Telefono varchar(10) not null,
+contrasena varchar(12) not null,
+Foreign key(Id_rol) references roles(Id)
+primary key(Id_usuario)
+);
+
+create table metodo_pago(
+Id_metodo varchar(50) not null,
+Nombre varchar(50) not null,
+primary key(Id_metodo)
+);
+
+create table productos(
+Id_producto varchar(50) not null,
+precio float not null,
+id_usuario int(11) not null,
+categoria varchar(50) not null,
+nombre varchar(50) not null,
+foreign key(Id_usuario) references usuarios(Id_usuario),
+primary key(Id_producto)
+);
+
+
+create table carrito_compras(
+Id_carrito varchar(50) not null,
+id_usuario int(11) not null,
+Id_producto varchar(50) not null,
+foreign key(Id_producto) references productos(Id_producto),
+foreign key(Id_usuario) references usuarios(Id_usuario),
+primary key(Id_carrito)
+);
+
+create table factura(
+Id_factura varchar(50) not null,
+id_usuario int(11) not null,
+Id_carrito varchar(50) not null,
+Id_producto varchar(50) not null,
+Id_metodo varchar (50) not null,
+foreign key(Id_usuario) references usuarios(Id_usuario),
+foreign key(Id_carrito) references carrito_compras(Id_carrito),
+foreign key(Id_producto) references productos(Id_producto),
+foreign key(Id_metodo) references metodo_pago(Id_metodo),
+primary key(Id_factura)
+);
+	
+//*  *//
+
+// SENTENCIAS DML //
+
+insert into usuarios (id_usuario, iD_rol, nombre, correo, contresena, telefono, fecha_nacimiento)
+values 
+(1, 1, 'junior medina', 'juniormedinabuitrago672@gmail.com', '1234', '3012830581', '2000-02-04');
+
+insert into ROLES (id, nombre)
+values 
+(1, 'admin'),
+(2, 'usuario'):
+
+
+// USO DE JOIN EN LA CRUD //
+
+SELECT usuarios.id_usuario, usuarios.nombre, usuarios.correo, roles.nombre AS rol
+          FROM usuarios
+          INNER JOIN roles ON usuarios.id_rol = roles.id;
+
+DELETE FROM usuarios WHERE id_usuario = $id_usuario";
+
+UPDATE usuarios SET id_rol = ? WHERE id_usuario = ?;
+
+SUBCONSULTA //**//
+
+SELECT * 
+FROM usuarios
+WHERE id_rol IN(
+SELECT id
+FROM roles
+);
+
+
