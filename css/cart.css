@@ -1,0 +1,32 @@
+#productos-container{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+}
+
+.tarjeta-producto{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.tarjeta-producto img{
+    width: 200px;
+    height: 200px;
+}
+
+.tarjeta-producto h3{
+    width: 100px;
+}
+
+#totales, #carrito-vacio{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+#totales p{
+    background-color: black;
+    color: white;
+}
+

@@ -1,0 +1,43 @@
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+
+h1 {
+    font-size: 36px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: white;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.5;
+}
+
+
+.imagen-bar,
+.imagen-cocteles,
+.imagen-bartenders {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+::selection {
+    background-color: rgb(238, 255, 0);
+    color: rgb(81, 0, 255);
+}

@@ -1,0 +1,86 @@
+:root{
+    --color-textoa: #fff;
+    --color-texto: #000000;
+    --color-acento: #05afaf;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+}
+
+h3, p{
+    margin: 6px 0;
+    background-color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-textoa);
+}
+
+a:hover:not(#cart:hover){
+    color: var(--color-acento);
+}
+
+button{
+    background-color: var(--color-acento);
+    color: white;
+    padding: 0 10px;
+    height: 25px;
+    border: unset;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header{
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.140);
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px;
+}
+
+header nav div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+#cuenta-carrito{
+    background-color: var(--color-acento);
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+}
+
+#logo{
+    height: 50px;
+}
+
+header nav img{
+    height: 35px;
+}
+
+.escondido{
+    display: none;
+    
+}
